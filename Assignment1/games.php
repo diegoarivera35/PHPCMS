@@ -51,6 +51,10 @@
                             <input type="hidden" name="id" value="'.$game['id'].'">
                         <button style="margin: 0 0 10px 10px" type="submit" name="delete" class="btn btn-sm btn-danger">Delete</button>
                         </form>
+                        <form method="GET" action="update.php" style="background-color: #3498db; color: #fff;">
+                            <input type="hidden" name="id" value="'.$game['id'].'">
+                        <button style="margin: 0 0 10px 10px" type="submit" name="update" class="btn btn-sm btn-warning">Update</button>
+                        </form>
                         </div>
                         </div>';
                         }                
