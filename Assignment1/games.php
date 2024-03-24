@@ -16,7 +16,7 @@
             </div>
             <?php
                 include('reusables/connect.php');
-                $query='SELECT games.id, games.name, games.genre, games.release_date, games.description, developers.developer_name
+                $query='SELECT games.id, games.name, games.genre, games.release_date, games.description, games.boxart, developers.developer_logo
                 FROM games
                 JOIN developers ON games.developer_id = developers.developer_id';
                 $games=mysqli_query($connect, $query);
@@ -31,6 +31,9 @@
                         echo'<div class="col-md-4">
                             <div class="card m-3" style="width: 20rem;">
                         <div class="card-body" style="background-color: #3498db; color: #fff;">
+                            <div class="card-image">
+                                <img src="images/'.$game['boxart'].'" class="card-img-top" alt="game boxart"/>
+                            </div>
                             <div class="card-item">
                                 <h5 class="card-title micro-5-regular">'.$game['name'].'</h5>
                             </div>
@@ -44,7 +47,7 @@
                             <strong>Description: </strong>'.$game['description'].'
                             </div>
                             <div class="card-item anta-regular">
-                            <strong>Developer: </strong>'.$game['developer_name'].'
+                            <strong>Developer: </strong> <img src="images/'.$game['developer_logo'].'" alt="dev logo" style="width:75px;"/>
                             </div>
                         </div>
                         <form method="GET" action="includes/deleteGame.php" style="background-color: #3498db; color: #fff;">

@@ -16,7 +16,7 @@
             </div>
             <?php
                 include('reusables/connect.php');
-                $query='SELECT developer_name from developers';
+                $query='SELECT developer_name, developer_logo from developers';
                 $developers=mysqli_query($connect, $query);
                 if(mysqli_connect_error()){
                     die("Connection error: ". mysqli_connect_error());
@@ -30,6 +30,7 @@
                             <div class="card m-3" style="width: 20rem;">
                         <div class="card-body">
                             <div class="card-item">
+                                <img class="card-img-top" src="images/'.$developer['developer_logo'].'" style="width: 100px;"/>
                                 <a style="text-decoration:none" href="">' . $developer['developer_name'] . '</a>
                             </div>
                         </div>
