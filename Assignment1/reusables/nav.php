@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
           <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+              <a class="nav-link active" aria-current="page" href="../splash.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="games.php">Games</a>
@@ -39,6 +39,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="addGame.php">Add Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="../admin/logout.php">Log Out</a>
             </li>
           </ul>
         </div>

@@ -8,10 +8,11 @@ if(isset($_POST['updateGame'])){
   $genre = $_POST['genre'];
   $devid = $_POST['dname'];
   $desc = $_POST['description'];
+  $boxart = $_POST['boxart'];
 
 
   include('../reusables/connect.php');
-  $query = "UPDATE games SET name = '$name', release_date = '$date', genre = '$genre', developer_id = '$devid', description = '$desc' WHERE id = '$id'";
+  $query = "UPDATE games SET name = '$name', release_date = '$date', genre = '$genre', developer_id = '$devid', description = '$desc', boxart = '$boxart' WHERE id = '$id'";
 
   $game = mysqli_query($connect, $query);
 
